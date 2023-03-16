@@ -24,12 +24,14 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
-        myRigidbody.velocity = new Vector2(moveVerticalSpeed, myRigidbody.velocity.y);
-        if (Input.GetKeyDown(KeyCode.W))
+        //var horizontalInput = Input.GetAxisRaw("Horizontal");
+        //myRigidbody.velocity = new Vector2(horizontalInput * moveHorizontalSpeed, myRigidbody.velocity.y);
+        myRigidbody.velocity = new Vector2(moveVerticalSpeed, 0f);
+        if (Input.GetKey(KeyCode.W))
         {
             myRigidbody.velocity = new Vector2(0f, moveHorizontalSpeed);
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
             myRigidbody.velocity = new Vector2(0f, -moveHorizontalSpeed);
         }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1566292735299581101
+--- !u!1 &2231323577429918996
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1566292735299581099}
-  - component: {fileID: 1566292735299581098}
-  - component: {fileID: 1721029776298527421}
+  - component: {fileID: 2231323577429918998}
+  - component: {fileID: 2231323577429918999}
+  - component: {fileID: 3152203734349226239}
   m_Layer: 0
-  m_Name: Banana
+  m_Name: Grapes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1566292735299581099
+--- !u!4 &2231323577429918998
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566292735299581101}
+  m_GameObject: {fileID: 2231323577429918996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.189, y: 0.17137885, z: 0}
+  m_LocalPosition: {x: -1.305, y: 0.17137885, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1566292735299581098
+--- !u!212 &2231323577429918999
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566292735299581101}
+  m_GameObject: {fileID: 2231323577429918996}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3906008909390186440, guid: 8e8c1a73df726844b8c4ce6ce2673b5d,
+  m_Sprite: {fileID: -7817259731008224619, guid: 8e8c1a73df726844b8c4ce6ce2673b5d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -83,15 +83,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1721029776298527421
+--- !u!114 &3152203734349226239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566292735299581101}
+  m_GameObject: {fileID: 2231323577429918996}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3b92d4e72f54e3428163108b48bd85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsForFoodPickup: 20
+  healthForFoodPickup: 10
+  pickupHealth: 5
+  poisonChance: 7
+  impactEffect: {fileID: 3624600686232296617, guid: d323247f2bac5e1419d101583ecdd706,
+    type: 3}

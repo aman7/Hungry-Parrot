@@ -75,7 +75,6 @@ public class GameSession : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(healthDecreaseTimer);
-            Debug.Log("decreased health");
             currentPlayerHealth -= healthToDecrease;
             UpdateHealthBar();
         }
