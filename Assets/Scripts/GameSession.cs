@@ -31,7 +31,15 @@ public class GameSession : MonoBehaviour
     void Update()
     {
         
-        //InvokeRepeating("DecreaseHealthWithTime", 5f, 5f);
+        
+    }
+
+    public void CheckForDeath()
+    {
+        if(currentPlayerHealth <= 0)
+        {
+            FindObjectOfType<PlayerController>().PlayerDeath();
+        }
     }
 
     public void AddToScore(int pointsToAdd)
@@ -62,6 +70,7 @@ public class GameSession : MonoBehaviour
         currentPlayerHealth -= healthToSubtract;
 
         UpdateHealthBar();
+        CheckForDeath();
     }
 
     private void UpdateHealthBar()
@@ -77,6 +86,7 @@ public class GameSession : MonoBehaviour
             yield return new WaitForSeconds(healthDecreaseTimer);
             currentPlayerHealth -= healthToDecrease;
             UpdateHealthBar();
+            CheckForDeath();
         }
         
     }

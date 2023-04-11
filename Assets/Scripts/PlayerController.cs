@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int moveHorizontalSpeed = 5;
     [SerializeField] int playerHealth = 100;
 
+    [SerializeField] GameObject playerDeathEffect;
+
+    [SerializeField] AudioSource eatSoundEffect;
+    [SerializeField] AudioSource dieEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,8 +42,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void PlayerDeath()
+    {
+        Instantiate(playerDeathEffect, transform.position, Quaternion.identity);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        dieEffect.Play();
+
+        StartCoroutine(LetTheDeathEffectPlay());
+        
+
+
+    }
+
     public int getPlayerHealth()
     {
         return playerHealth;
+    }
+
+    public void PlaySoundEffect()
+    {
+        eatSoundEffect.Play();
+    }
+
+    IEnumerator LetTheDeathEffectPlay()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Time.timeScale= 0;
+
     }
 }
